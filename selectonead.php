@@ -1,9 +1,6 @@
 <?php
 require_once "config.php";
-// Create connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+
 
 $sql = "SELECT advertiser_URL, advertiser_logo  FROM advertisers ORDER BY advertiser_name ASC";
 if ($result = mysqli_query($link, $sql))
