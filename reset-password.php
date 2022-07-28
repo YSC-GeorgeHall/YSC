@@ -68,6 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 }
 ?>
+?>
  
 <!DOCTYPE html>
 <html lang="en">
@@ -117,7 +118,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <div class="contentfromsidenav">
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" style="margin-left: 1.9%;">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Company name</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Company name</a> <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -132,7 +133,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           
         
           <li class="nav-item">
-            <a class="nav-link"  href="index.php">
+            <a class="nav-link "  href="index.php">
               <span data-feather="home" class="align-text-bottom"></span>
               Browsing - View All Stores
             </a>
@@ -199,22 +200,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
           </li>
         </ul>
         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
-          <span>Create Profile</span>
+          <span>Welcome, <?php echo htmlspecialchars($_SESSION["username"]); ?></span>
           <a class="link-secondary" href="#" aria-label="Add a new report">
             <span data-feather="plus-circle" class="align-text-bottom"></span>
           </a>
         </h6>
         <ul class="nav flex-column mb-2">
           <li class="nav-item">
-            <a class="nav-link" href="register.php">
+            <a class="nav-link"  href="view-profile.php">
               <span data-feather="file-text" class="align-text-bottom"></span>
-              Register
+              View Your Profile
             </a>
           </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="view-fav.php">
+                                    <span data-feather="file-text" class="align-text-bottom"></span>
+                                    View Your Favourites
+                                    </a>
+                                </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="login.php">
+            <a class="nav-link active" aria-current="page"  href="reset-password.php">
               <span data-feather="file-text" class="align-text-bottom"></span>
-              Log In
+              Reset Your Password
             </a>
           </li>
         </ul>
@@ -222,8 +229,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </nav>
 </div>
 </div>
-
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"  >
+   
+   
+ 
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"  >
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="https://via.placeholder.com/728x120.png?text=Image1" class="d-block w-100" alt="...">
@@ -246,6 +255,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </div>
   
 <div class="container" style="padding-left: 5%;">
+
     <div class="wrapper">
         <h2>Reset Password</h2>
         <p>Please fill out this form to reset your password.</p>
@@ -266,10 +276,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
         </form>
     </div>  
-</div>
+
+
+
+
 </div>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
       <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
-</body>
+  </body>
 </html>

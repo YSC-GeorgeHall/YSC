@@ -145,12 +145,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </h6>
         <ul class="nav flex-column mb-2">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page"  href="view-profile.php">
+            <a class="nav-link "  href="view-profile.php">
               <span data-feather="file-text" class="align-text-bottom"></span>
               View Your Profile
             </a>
           </li><li class="nav-item">
-                                    <a class="nav-link" href="view-fav.php">
+                                    <a class="nav-link active" aria-current="page" href="view-profile.php">
                                     <span data-feather="file-text" class="align-text-bottom"></span>
                                     View Your Favourites
                                     </a>
@@ -203,9 +203,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </form>
 
 
-<?php 
-echo  $_SESSION['id']
- ?>
+
 
 </div>
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>

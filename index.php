@@ -52,7 +52,7 @@
                         if(mysqli_stmt_fetch($stmt)){
                             if(password_verify($password, $hashed_password)){
                                 // Password is correct, so start a new session
-                                session_start();
+                                
                                 
                                 // Store data in session variables
                                 $_SESSION["loggedin"] = true;
@@ -217,11 +217,17 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="view-profile.php">
+                                    <a class="nav-link" href="view-fav.php">
                                     <span data-feather="file-text" class="align-text-bottom"></span>
                                     View Your Favourites
                                     </a>
                                 </li>
+          <li class="nav-item">
+            <a class="nav-link"  href="reset-password.php">
+              <span data-feather="file-text" class="align-text-bottom"></span>
+              Reset Your Password
+            </a>
+          </li>
                                 <?php }else{ ?>
                                 <li class="nav-item">
                                     <a class="nav-link" href="register.php">
